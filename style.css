@@ -1,0 +1,139 @@
+/* Paleta de cores: https://www.colorio.co/palette/0078ef-333333-555555-dddddd-aaaaaa */
+:root {
+  --cor-destaque: #0078ef;   /* azul: links e foco */
+  --cor-texto: #333333;      /* texto principal */
+  --cor-texto-suave: #555555; /* texto secundário */
+  --cor-fundo: #dddddd;      /* fundo da página */
+  --cor-borda: #aaaaaa;      /* bordas e divisórias */
+  --cor-card: #ffffff;       /* fundo dos cards (mais claro que a página) */
+  --cor-erro: #c0392b;       /* mensagem de erro */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.5;
+}
+
+/* Conteúdo centralizado com largura máxima de 700px */
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 16px;
+}
+
+.titulo {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+/* Cards com bordas arredondadas */
+.card {
+  background-color: var(--cor-card);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Busca */
+.rotulo {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--cor-texto-suave);
+}
+
+.campo-busca {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  color: var(--cor-texto);
+}
+
+.campo-busca:focus {
+  outline: none;
+  border-color: var(--cor-destaque);
+}
+
+/* Mensagens de estado (loading, vazio, erro) */
+.mensagem {
+  text-align: center;
+  color: var(--cor-texto-suave);
+}
+
+.mensagem:empty {
+  display: none;
+}
+
+.mensagem.erro {
+  color: var(--cor-erro);
+}
+
+/* Lista de resultados */
+.lista {
+  list-style: none;
+}
+
+.repositorio {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--cor-fundo);
+}
+
+.repositorio:first-child {
+  padding-top: 0;
+}
+
+.repositorio:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.autor {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--cor-texto-suave);
+  font-size: 14px;
+}
+
+.autor img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.nome-repositorio {
+  margin-top: 8px;
+  font-size: 18px;
+}
+
+.descricao {
+  margin-top: 4px;
+  color: var(--cor-texto-suave);
+}
+
+.detalhes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--cor-texto-suave);
+}
+
+.link {
+  color: var(--cor-destaque);
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}

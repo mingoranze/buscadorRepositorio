@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscador de Repositórios</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1 class="titulo">Buscador de Repositórios</h1>
+
+    <!-- Card de busca -->
+    <section class="card">
+      <label for="campo-busca" class="rotulo">Pesquise repositórios no GitHub</label>
+      <input
+        type="text"
+        id="campo-busca"
+        class="campo-busca"
+        placeholder="Digite uma palavra-chave e pressione ENTER"
+        autocomplete="off"
+      >
+    </section>
+
+    <!-- Card de resultados -->
+    <section class="card" id="card-resultados" hidden>
+      <p class="mensagem" id="mensagem"></p>
+      <ul class="lista" id="lista-resultados"></ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
